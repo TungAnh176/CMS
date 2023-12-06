@@ -19,7 +19,13 @@ include "layout/header.php";
     <div class="container">
         <div class="row">
             <h3 class="text-center">User Management</h3>
-            <a href="" class="btn btn-success mb-3" style="width:15%"><i class="bi bi-person-add"></i> Add New User</a>
+            <div class="d-flex justify-content-between">
+                <a href="" class="btn btn-success mb-3" style="width:15%"><i class="bi bi-person-add"></i> Add New User</a>
+                <form class="d-flex">
+                    <input class="form-control mb-3" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success mb-3" type="submit">Search</button>
+                </form>
+            </div>
             <table class="table">
                 <thead>
                     <tr>
@@ -32,17 +38,17 @@ include "layout/header.php";
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($users as $user): ?>
-                    <tr>
-                        <th scope="row"><?= $user['id']; ?></th>
-                        <td><?= $user['first_name']; ?></td>
-                        <td><?= $user['last_name']; ?></td>
-                        <td><?= $user['email']; ?></td>
-                        <td><?= ($user['type'] == 0) ? 'Admin' : 'Tác Giả'; ?></td>
-                        <td><i class="bi bi-eye"></i></td>
-                        <td><i class="bi bi-trash"></i></td>
-                        <td><i class="bi bi-pencil"></i></td>
-                    </tr>
+                    <?php foreach ($users as $user) : ?>
+                        <tr>
+                            <th scope="row"><?= $user['id']; ?></th>
+                            <td><?= $user['first_name']; ?></td>
+                            <td><?= $user['last_name']; ?></td>
+                            <td><?= $user['email']; ?></td>
+                            <td><?= ($user['type'] == 0) ? 'Admin' : 'Tác Giả'; ?></td>
+                            <td><i class="bi bi-eye"></i></td>
+                            <td><i class="bi bi-trash"></i></td>
+                            <td><i class="bi bi-pencil"></i></td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
