@@ -41,7 +41,7 @@
     </header>
 
     <main>
-        <h1>CHÀO MỪNG BẠN ĐẾN VỚI TRANG ADMINCMS</h1>
+        <h1 class="text-center">CHÀO MỪNG BẠN ĐẾN VỚI TRANG ADMINCMS</h1>
     </main>
 
 </body>
