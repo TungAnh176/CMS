@@ -7,6 +7,6 @@
         try {
             return new PDO("mysql:host=$host;dbname=$database", $user, $password);
         } catch (PDOException $e) {
-            die("Error failed to connect to MySQL: " . $e->getMessage());
+            echo ("Error failed to connect to MySQL: " . $e->getMessage());
         }
     }
